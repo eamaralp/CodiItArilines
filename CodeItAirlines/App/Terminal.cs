@@ -1,26 +1,23 @@
-﻿using CodeItAirlines.App.Pessoas;
-using System;
+﻿using CodeItAirlines.App.Pessoas.Interfaces;
 using System.Collections.Generic;
 
 namespace CodeItAirlines.App
 {
-    public class Terminal
+    public class Terminal : Local, ILocal
     {
-        private readonly List<Pessoa> _passageiros;
-
         public Terminal()
         {
-            _passageiros = new List<Pessoa>();
+            _pessoas = new List<IPessoa>();
         }
 
-        public void AdicionarPassageiro(Pessoa passageiro)
+        public void AdicionarPessoa(IPessoa pessoa)
         {
-            _passageiros.Add(passageiro);
+            _pessoas.Add(pessoa);
         }
 
-        public void RemoverPassageiro(Pessoa passageiro)
+        public void RemoverPessoa(IPessoa passageiro)
         {
-
+            _pessoas.Remove(passageiro);
         }
     }
 }

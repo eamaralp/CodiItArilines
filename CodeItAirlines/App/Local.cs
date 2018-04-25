@@ -1,14 +1,17 @@
-﻿using CodeItAirlines.App.Pessoas;
-using System;
+﻿using CodeItAirlines.App.Pessoas.Interfaces;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CodeItAirlines.App
 {
     public class Local
     {
-        public string nome { get; set; }
-        public Tripulacao tripulacao {get; set;}
-        public List<Pessoa> passageiros { get; set; }
+        public string Nome { get; set; }
+        public List<IPessoa> _pessoas { get; set; }
+
+        public Local()
+        {
+            _pessoas = new List<IPessoa>();
+        }
+
     }
 }

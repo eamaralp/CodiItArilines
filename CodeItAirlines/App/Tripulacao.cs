@@ -1,4 +1,5 @@
 ﻿using CodeItAirlines.App.Pessoas;
+using CodeItAirlines.App.Pessoas.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,8 +42,5 @@ namespace CodeItAirlines.App
 
             _tripulacaoCabine.Add(tripulante);
         }
-
-
-
     }
 }

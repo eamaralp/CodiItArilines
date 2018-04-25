@@ -1,6 +1,7 @@
 ﻿namespace CodeItAirlines.App.Pessoas.Interfaces
 {
-    public interface IMotorista : IPessoa
+    public interface IPessoa
     {
+        string Nome { get; set; }
     }
 }

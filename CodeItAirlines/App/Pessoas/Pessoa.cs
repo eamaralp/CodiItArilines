@@ -1,6 +1,8 @@
-﻿namespace CodeItAirlines.App.Pessoas
+﻿using CodeItAirlines.App.Pessoas.Interfaces;
+
+namespace CodeItAirlines.App.Pessoas
 {
-    public abstract class Pessoa
+    public abstract class Pessoa : IPessoa
     {
         public string Nome { get; set; }
     }
