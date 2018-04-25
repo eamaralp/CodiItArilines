@@ -1,0 +1,10 @@
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.deps.json
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.runtimeconfig.json
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.runtimeconfig.dev.json
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.dll
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.csproj.CoreCompileInputs.cache
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.AssemblyInfoInputs.cache
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.AssemblyInfo.cs
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.pdb
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.dll
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.pdb
