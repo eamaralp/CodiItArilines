@@ -1,6 +1,6 @@
 ﻿namespace CodeItAirlines.App.Pessoas
 {
-    public abstract class TripulanteCabine : Tripulante
+    public abstract class TripulanteCabine : Pessoa, ITripulante
     {
 
 

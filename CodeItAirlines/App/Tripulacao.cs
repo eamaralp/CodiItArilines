@@ -1,6 +1,7 @@
 ﻿using CodeItAirlines.App.Pessoas;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CodeItAirlines.App
@@ -16,10 +17,32 @@ namespace CodeItAirlines.App
             _tripulacaoCabine = new List<TripulanteCabine>();
         }
 
-        public void AdicionarTripulanteTecnico(TripulanteTecnico tripulante)
+        public void EmbarcarTipulante(ITripulante tripulante)
         {
+            if (tripulante is TripulanteTecnico)
+                EmbarcarTripulanteTecnico((TripulanteTecnico)tripulante);
+
+            if (tripulante is TripulanteCabine)
+                EmbarcarTripulanteCabine((TripulanteCabine)tripulante);
+        }
+
+        private void EmbarcarTripulanteTecnico(TripulanteTecnico tripulante)
+        {
+            if (_tripulacaoTecnica.Count() == 3)
+                throw new Exception("A capacidade máxima da tripulação técnica já foi atingida!");
+
             _tripulacaoTecnica.Add(tripulante);
         }
+
+        private void EmbarcarTripulanteCabine(TripulanteCabine tripulante)
+        {
+            if (_tripulacaoCabine.Count() == 3)
+                throw new Exception("A capacidade máxima da tripulação de cabine já foi atingida!");
+
+            _tripulacaoCabine.Add(tripulante);
+        }
+
+
 
     }
 }

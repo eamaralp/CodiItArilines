@@ -8,3 +8,4 @@ C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.
 C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\bin\Debug\netcoreapp2.0\CodeItAirlines.pdb
 C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.dll
 C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.pdb
+C:\Users\eamar\source\repos\CodeItAirlines\CodeItAirlines\obj\Debug\netcoreapp2.0\CodeItAirlines.csprojResolveAssemblyReference.cache
