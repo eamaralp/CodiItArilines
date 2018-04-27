@@ -1,8 +1,6 @@
-﻿using CodeItAirlines.App.Pessoas.Interfaces;
-
-namespace CodeItAirlines.App.Pessoas
+﻿namespace CodeItAirlines.App.Pessoas
 {
-    public class Ladrao : Pessoa, IPassageiro
+    public class Ladrao : Pessoa
     {
         public Ladrao()
         {

@@ -1,8 +1,6 @@
-﻿using CodeItAirlines.App.Pessoas.Interfaces;
-
-namespace CodeItAirlines.App.Pessoas
+﻿namespace CodeItAirlines.App.Pessoas
 {
-    public class Oficial : TripulanteTecnico, IPassageiro
+    public class Oficial : Pessoa, ITripulanteTecnico
     {
         public Oficial()
         {

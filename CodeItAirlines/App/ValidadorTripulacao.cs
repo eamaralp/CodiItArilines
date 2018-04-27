@@ -1,6 +1,5 @@
 ﻿using CodeItAirlines.App.Pessoas.Exceptions;
 using CodeItAirlines.App.Pessoas.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,16 +16,19 @@ namespace CodeItAirlines.App.Pessoas
 
         public void Validar(IPessoa pessoa)
         {
-            if(pessoa is TripulanteTecnico)
+            if(pessoa is ITripulanteTecnico)
                 ValidarTripulacaoTecnica(pessoa);
-            if (pessoa is TripulanteCabine)
+            if (pessoa is ITripulanteCabine)
                 ValidarTripulacaoDeCabine(pessoa);
         }
 
 
         private void ValidarTripulacaoTecnica(IPessoa pessoa)
         {
-            var tripulacaoTecnica = _pessoas.Where(x => (x.GetType() == typeof(TripulanteTecnico))).ToList();
+            if (!_pessoas.Any())
+                return;
+
+            var tripulacaoTecnica = _pessoas.Where(x => (x.GetType() == typeof(ITripulanteTecnico))).ToList();
 
             if (tripulacaoTecnica.Count() == 3)
                 throw new ValidacaoException("A capacidade máxima da tripulação técnica já foi atingida!");
@@ -40,7 +42,10 @@ namespace CodeItAirlines.App.Pessoas
 
         private void ValidarTripulacaoDeCabine(IPessoa pessoa)
         {
-            var tripulacaoCabine = _pessoas.Where(x => (x.GetType() == typeof(TripulanteCabine))).ToList();
+            if (!_pessoas.Any())
+                return;
+
+            var tripulacaoCabine = _pessoas.Where(x => (x.GetType() == typeof(ITripulanteCabine))).ToList();
 
             if (tripulacaoCabine.Count() == 3)
                 throw new ValidacaoException("A capacidade máxima da tripulação técnica já foi atingida!");

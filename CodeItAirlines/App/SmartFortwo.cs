@@ -7,23 +7,42 @@ namespace CodeItAirlines.App
     public class SmartForTwo
     {
         private IMotorista motorista;
-        private IPassageiro passageiro;
+        private IPessoa passageiro;
 
-        public bool Embarcar(IMotorista motorista, IPassageiro passageiro)
+        public void EmbarcarMotorista(IMotorista motorista)
         {
-            ValidarEmbarqueSmartForTwo(motorista, passageiro);
             this.motorista = motorista;
-            this.passageiro = passageiro;
-
-            return true;
         }
 
-        private void ValidarEmbarqueSmartForTwo(IMotorista motorista, IPassageiro passageiro)
+        public void EmbarcarPassageiro(IPessoa passageiro)
+        {
+            this.passageiro = passageiro;
+        }
+
+        public IMotorista DesembarcarMotorista()
+        {
+            var motorista = this.motorista;
+
+            this.motorista = null;
+
+            return motorista;
+        }
+
+        public IPessoa DesembarcarPassageiro()
+        {
+            var passageiro = this.passageiro;
+
+            this.passageiro = null;
+
+            return passageiro;
+        }
+
+        public void ValidarEmbarqueSmartForTwo()
         {
             var listaDePessoasSmartForTwo = new List<IPessoa>
             {
-                motorista,
-                passageiro
+                this.motorista,
+                this.passageiro
             };
 
             new ValidadorDePermanencia().Validar(listaDePessoasSmartForTwo);
