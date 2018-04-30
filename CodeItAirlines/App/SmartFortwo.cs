@@ -6,8 +6,8 @@ namespace CodeItAirlines.App
 {
     public class SmartForTwo
     {
-        private IMotorista motorista;
-        private IPessoa passageiro;
+        public IMotorista motorista { get; set; }
+        public IPessoa passageiro { get; set; }
 
         public void EmbarcarMotorista(IMotorista motorista)
         {
@@ -47,5 +47,13 @@ namespace CodeItAirlines.App
 
             new ValidadorDePermanencia().Validar(listaDePessoasSmartForTwo);
         }
+
+        public void TrocarConsutor()
+        {
+            var aux = this.motorista;
+            this.motorista = this.passageiro as IMotorista;
+            this.passageiro = aux;
+        }
+
     }
 }

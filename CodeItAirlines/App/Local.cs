@@ -25,6 +25,7 @@ namespace CodeItAirlines.App
                 {
                     this.Pessoas.Add(pessoa);
                     new ValidadorDePermanencia().Validar(this.Pessoas);
+                    new ValidadorTripulacao(this.Pessoas).Validar(pessoa);
                     scope.Complete();
                 }
                 catch (ValidacaoException)
@@ -34,14 +35,15 @@ namespace CodeItAirlines.App
             }
         }
 
-        public void RemoverPessoa(IPessoa passageiro)
+        public void RemoverPessoa(IPessoa pessoa)
         {
             using (TransactionScope scope = new TransactionScope())
             {
                 try
                 {
-                    this.Pessoas.Remove(passageiro);
+                    this.Pessoas.Remove(pessoa);
                     new ValidadorDePermanencia().Validar(this.Pessoas);
+                    new ValidadorTripulacao(this.Pessoas).Validar(pessoa);
                     scope.Complete();
                 }
                 catch (ValidacaoException)

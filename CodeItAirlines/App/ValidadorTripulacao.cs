@@ -28,7 +28,7 @@ namespace CodeItAirlines.App.Pessoas
             if (!_pessoas.Any())
                 return;
 
-            var tripulacaoTecnica = _pessoas.Where(x => (x.GetType() == typeof(ITripulanteTecnico))).ToList();
+            var tripulacaoTecnica = _pessoas.Where(x => x is ITripulanteTecnico).ToList();
 
             if (tripulacaoTecnica.Count() == 3)
                 throw new ValidacaoException("A capacidade máxima da tripulação técnica já foi atingida!");
@@ -45,7 +45,7 @@ namespace CodeItAirlines.App.Pessoas
             if (!_pessoas.Any())
                 return;
 
-            var tripulacaoCabine = _pessoas.Where(x => (x.GetType() == typeof(ITripulanteCabine))).ToList();
+            var tripulacaoCabine = _pessoas.Where(x => x is ITripulanteCabine).ToList();
 
             if (tripulacaoCabine.Count() == 3)
                 throw new ValidacaoException("A capacidade máxima da tripulação técnica já foi atingida!");

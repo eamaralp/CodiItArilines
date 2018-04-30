@@ -16,11 +16,11 @@ namespace CodeItAirlines.App.Pessoas
 
             _listaDePessoas = listaDePessoas.Where(x => x != null).ToList();
 
-            if (listaDePessoas.Exists(x => x != null && x.GetType() == typeof(Ladrao)))
+            if (_listaDePessoas.Exists(x => x != null && x.GetType() == typeof(Ladrao)))
                 ValidarPermanenciaLadrao();
-            if (listaDePessoas.Exists(x => x != null && x.GetType() == typeof(ChefeDeServico)))
+            if (_listaDePessoas.Exists(x => x != null && x.GetType() == typeof(ChefeDeServico)))
                 ValidarPermanenciaChefeDeServico();
-            if (listaDePessoas.Exists(x => x != null && x.GetType() == typeof(Piloto)))
+            if (_listaDePessoas.Exists(x => x != null && x.GetType() == typeof(Piloto)))
                 ValidarPermanenciaPiloto();
         }
 
